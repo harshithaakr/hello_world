@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+   char str[101];
+   scanf("%[^\n]",str);
+   int s,count=0;
+   char a[101],b[101];
+   int n=strlen(str);
+   for(int i=0;i<n;i++){
+       if(str[i]!=' '){
+           a[count]=str[i];
+           count++;
+       }
+       else{
+           break;
+       }
+   }
+   for(int i=count;i>=0;i--){
+       printf("%c",a[i]);
+   }
+   printf(" ");
+   for(int i=n-1;i>=count;i--){
+        printf("%c",str[i]);
+   } 
+}
