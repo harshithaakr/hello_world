@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+   char str[101];
+   scanf("%s",str);
+   int sum=0,count=0;
+   int a[101];
+   int n=strlen(str);
+   for(int i=0;i<n;i++){
+       sum=sum+str[i];
+        if(str[i-3]=='n' && sum==426){
+           sum=10;
+       }
+       switch(sum){
+          
+           case 322:
+           a[count]=1;
+           count++;
+           sum=0;
+           break;
+           
+           case 346:
+           a[count]=2;
+           count++;
+           sum=0;
+           break;
+           
+           case 536:
+           a[count]=3;
+           count++;
+           sum=0;
+           break;
+          
+           case 426:
+           a[count]=5;
+           count++;
+           sum=0;
+           break;
+           
+           case 10:
+           a[count]=9;
+           count++;
+           sum=0;
+           break;
+       }
+   
+   }
+   for(int i=0;i<count;i++){
+       printf("%d",a[i]);
+   }
+}
